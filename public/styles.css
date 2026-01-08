@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{ 
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.app{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background: #FFF;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+.app > .screen{
+    display: none;
+}
+.app > .screen.active{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.screen .form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+}
+.screen .form-input{
+    width: 100%;
+    margin: 20px 0;
+}
+.screen h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #111;
+    border-bottom: 4px solid #555;
+    padding-bottom: 5px 0px;
+    display: inline-block;
+}
+.screen .form-input label{
+    display: block;
+    margin-bottom: 5px;
+}
+.screen .form-input input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+}
+.screen .form-input button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #111;
+    color: #eee;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.chat-screen .header{
+    background: #111;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.chat-screen .header .logo{
+    color: #eee;
+    font-size: 18px;
+    font-weight: 600;
+}
+.chat-screen .header button{
+    padding: 5px 10px;
+    font-size: 15px;
+    background:transparent;
+    color: #eee;
+    border: 1px solid #eee;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+}
+.chat-screen .messages{
+    width: 100%;
+    height: calc(100% - 50px);
+    background: #f5f5f5;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px;
+}
+
+.chat-screen .messages .message {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width: 80%;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin: 4px 0;
+}
+
+.chat-screen .messages .message > div{
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    max-width: 100%;
+}
+
+.chat-screen .messages .message.my-message{
+    align-self: flex-end;
+}
+
+.chat-screen .messages .message.other-message{
+    align-self: flex-start;
+}
+
+.chat-screen .messages .message .name{
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.chat-screen .messages .message .text{
+    font-size: 16px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+.chat-screen .messages .update{
+    width: 100%;
+    text-align: center;
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+}
+.chat-screen .textbox{
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    
+}
+.chat-screen .textbox input{
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    outline: none;
+}
+.chat-screen .textbox button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #111;
+    color: #eee;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
